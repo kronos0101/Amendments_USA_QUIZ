@@ -74,20 +74,30 @@ def amendments_quiz():
             answer = int(input(f"Which amendment is described as:\n\"{description}nter the amendment number: "))
             if answer == amendment:
                 print("Correct!")
+                print("\n")
                 score += 1
             else:
                 print(f"Wrong! The correct answer is Amendment {amendment}.")
                 print(f"Details: {answers[amendment]}")
+                print("\n")
         except ValueError:
             print("Invalid input! Please enter a number.")
+            print("\n")
+            
 
     print(f"\nYour final score: {score}/10")
     if score == 10:
         print("Excellent! You know your amendments well!")
+        print("\n")
+                
     elif score >= 7:
         print("Good job! A little more study and you'll be a pro.")
+        print("\n")
+                
     else:
         print("Keep learning! The Constitution is worth knowing.")
+        print("\n")
+                
 
 # Call the function to start the quiz
 amendments_quiz()
