@@ -71,7 +71,7 @@ def amendments_quiz():
     for _ in range(10):  # Ask 10 random questions
         amendment, description = random.choice(list(questions.items()))
         try:
-            answer = int(input(f"Which amendment is described as:\n\"{description}nter the amendment number: "))
+            answer = int(input(f"Which amendment is described as:\n\"{description}enter the amendment number: "))
             if answer == amendment:
                 print("Correct!")
                 print("\n")
