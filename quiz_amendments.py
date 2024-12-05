@@ -116,7 +116,6 @@ def amendments_quiz():
             file.write("Congratulations! You got all the answers correct.\n")
     
     print(f"\nYour results have been saved in the file: {filename}")
-    print("https://openpsychometrics.org/tests/IPIP-BFFM/results.php")
-
+    
 # Call the function to start the quiz
 amendments_quiz()
