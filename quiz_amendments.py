@@ -1,5 +1,6 @@
 import random
 import os
+import time  # Import time module for pausing
 
 def amendments_quiz():
     # Simple format for questions
@@ -82,6 +83,11 @@ def amendments_quiz():
                 print(f"Wrong! The correct answer is Amendment {amendment}.")
                 print(f"Details: {answers[amendment]}\n")
                 incorrect_answers.append((amendment, description))  # Log incorrect answers
+
+            # Add a short pause (2 seconds) before asking the next question
+            print("Review your answers and get ready!...")
+            time.sleep(2)  # Pause for 2 seconds before the next question
+            
         except ValueError:
             print("Invalid input! Please enter a number.\n")
     
@@ -110,5 +116,7 @@ def amendments_quiz():
             file.write("Congratulations! You got all the answers correct.\n")
     
     print(f"\nYour results have been saved in the file: {filename}")
+    print("https://openpsychometrics.org/tests/IPIP-BFFM/results.php")
 
+# Call the function to start the quiz
 amendments_quiz()
